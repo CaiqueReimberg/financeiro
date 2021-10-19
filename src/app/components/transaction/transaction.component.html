@@ -1,0 +1,57 @@
+<div class="transaction-form z-depth-4">
+    <h2>{{ title }}</h2>
+
+    <form [formGroup]="transactionForm" (ngSubmit)="onSubmit()">
+
+        <div class="input-fields-area">
+            <div class="input-field col s6">
+                <input type="text" class="validate"  formControlName="item">
+                <label>Compra</label>
+            </div>
+    
+            <div class="input-field col s6">
+                <input type="text" formControlName="reason">
+                <label>Motivo</label>
+            </div>
+    
+            <div class="input-field col s6">
+                <input type="text" (input)="onTagChange($event.target.value)">
+                <label>Adicionar tags</label>
+            </div>
+
+            <div class="input-field col s12">
+                <select formControlName="bank">
+                  <option *ngFor="let account of accounts" value="{{ account }}" >{{ account }}</option>
+                </select>
+                <label>Conta utilizada</label>
+            </div>
+
+            <div class="input-field col s6">
+                <i class="material-icons prefix">attach_money</i>
+                <input type="number" min="0" step="any" formControlName="amount">
+                <label>Valor total</label>
+            </div>
+            
+            <div class="input-field col s6" *ngIf="!isRecurrent">
+                <input type="number" formControlName="instalments">
+                <label>Qtd de Parcelas</label>
+            </div>
+        </div>
+
+        <p>
+            <label>
+                <input type="checkbox" (input)="isRecurrent=!isRecurrent"/>
+                <span>Conta recorrente?</span>
+            </label>
+        <p>
+
+        <div class="chip" *ngFor="let singleTag of tags">
+            {{ singleTag }}
+            <i class="close material-icons">close</i>
+        </div>
+
+        <button class="btn waves-effect waves-light btn-submit">
+            ADICIONAR INFORMAÇÃO
+        </button>
+    </form>
+</div>

@@ -1,29 +1,9 @@
 @import '/src/styles.scss';
 
-.example-container {
-  height: 100%;
-}
-
-.left-menu {
-  width: 200px;
-}
-
-.header {
-  background-color: $primary-color;;
-  display: flex;
-  padding: 1rem;
-
-
-  .menu-button {
-    background-color: $secondary-color;
-    margin-left: 1rem;
-  }
-}
-
 .main-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
+  margin: 1rem 0;
 
   .menu-button {
     background-color: $secondary-color;

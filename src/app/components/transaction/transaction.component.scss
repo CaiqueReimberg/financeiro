@@ -1,0 +1,42 @@
+@import '/src/styles.scss';
+
+.transaction-form {
+    width: 800px;
+    margin: 10px auto;
+    text-align: center;
+    padding: 1rem;
+
+    form {
+        margin: 0 auto;
+        
+        .input-fields-area {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+
+        .input-field {
+            margin: 1rem auto;
+            width: 200px;
+        }
+
+        .tag-area {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .btn-submit {
+            background-color: $secondary-color;
+            display: block;
+            margin: 2rem auto;
+
+            &:hover {
+                background-color: $primary-color-lighter;
+            }
+        }
+    }
+}

@@ -1,7 +1,10 @@
-<!-- <nav class="navbar">
+<nav class="navbar">
   <div class="nav-wrapper">
-    <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>Financeiro</a>
-    <ul class="right hide-on-med-and-down">
+    <a href="#" data-target="slide-out" class="menu-toggle sidenav-trigger"><i class="material-icons">menu</i></a>
+    <div class="brand-area">
+      <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>Financeiro</a>
+    </div>
+    <ul class="menu-options hide-on-med-and-down">
       <li>
         <a class="menu-items"
           ><i class="material-icons">search</i></a
@@ -31,16 +34,3 @@
   <li><a class="waves-effect" href="#!">Visualização</a></li>
   <li><a class="waves-effect" href="#!">Planejamento</a></li>
 </ul>
-
- -->
- <mat-sidenav-container class="example-container" *ngIf="shouldRun">
-  <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
-               (closed)="events.push('close!')">
-    Sidenav content
-  </mat-sidenav>
-
-  <mat-sidenav-content>
-    <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p>
-    <p><button mat-button (click)="sidenav.toggle()">open</button></p>
-  </mat-sidenav-content>
-</mat-sidenav-container>

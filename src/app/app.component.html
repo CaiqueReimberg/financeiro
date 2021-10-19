@@ -1,49 +1,18 @@
 
+<app-navbar-top></app-navbar-top>
 
-<mat-sidenav-container class="example-container">
-  <mat-sidenav class="left-menu" #sidenav mode="side">
-    <ul class="side-content">
-      <li>
-        <a href="#!"><i class="material-icons">cloud</i>Financeiro</a>
-      </li>
-      <li><div class="divider"></div></li>
-      <li><a class="subheader">Meu Financeiro</a></li>
-      <li><a class="waves-effect" href="#!">Cartões</a></li>
-      <li><a class="waves-effect" href="#!">Faturas</a></li>
-      <li><a class="waves-effect" href="#!">Objetivos</a></li>
-      <li><div class="divider"></div></li>
-      <li><a class="subheader">Contas Conjuntas</a></li>
-      <li><a class="waves-effect" href="#!">Visualização</a></li>
-      <li><div class="divider"></div></li>
-      <li><a class="subheader">Contas Fixas</a></li>
-      <li><a class="waves-effect" href="#!">Visualização</a></li>
-      <li><a class="waves-effect" href="#!">Planejamento</a></li>
-    </ul>
-  </mat-sidenav>
+<div class="main-buttons">
+  <div class="transaction-buttons-area">
+    <a class="btn-floating btn-large waves-effect waves-light green transaction-button"
+      [routerLink]="'transaction/add'">
+        <i class="material-icons">add</i>
+    </a>
+    <a class="btn-floating btn-large waves-effect waves-light red transaction-button"
+      [routerLink]="'transaction/remove'">
+        <i class="material-icons">remove</i>
+    </a>
+  </div>
+</div>
 
-  <mat-sidenav-content>
-    <div class="header">
-      <a
-        class="btn-floating btn-large waves-effect waves-light sidenav-trigger open-side menu-button"
-        data-target="slide-out"
-        (click)="sidenav.toggle()"
-        ><i class="material-icons">menu</i></a
-      >
-      <a href="">Financeiro</a>
-    </div>
-
-    <div class="main-buttons">
-      <div class="transaction-buttons-area">
-        <a class="btn-floating btn-large waves-effect waves-light green transaction-button"
-          ><i class="material-icons">add</i></a>
-        <a class="btn-floating btn-large waves-effect waves-light red transaction-button"
-          ><i class="material-icons">remove</i></a>
-      </div>
-    </div>
-    
-    <app-transaction></app-transaction>
-    
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<router-outlet></router-outlet>
 

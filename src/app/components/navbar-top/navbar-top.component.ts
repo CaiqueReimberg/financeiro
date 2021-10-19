@@ -16,8 +16,4 @@ export class NavbarTopComponent {
       M.Sidenav.init(elem, { preventScrolling: true });
     }, 0);
   }
-
-  public click() {
-    this.shouldRun = !this.shouldRun;
-  }
 }
